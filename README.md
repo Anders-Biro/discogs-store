@@ -10,7 +10,7 @@ npm start
 
 ## TODO
 - [ ] Add album/artist detail view via click on album art
-- [ ] Create sidebar
+- [x] Create sidebar
     - [ ] Add search functionality within sidebar 
     - [ ] Add sort by  (Alphabetical, year release, etc...) functinality
 - [ ] Update CSS
