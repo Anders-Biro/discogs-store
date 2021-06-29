@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./RecordThumbnail.module.css";
 
 const RecordThumbnail = ({ basic_information }) => (
+  <div className={styles.boxshadow}>
     <article className={styles.record}>
       <figure className={styles.record__figure}>
         <img
@@ -17,11 +18,12 @@ const RecordThumbnail = ({ basic_information }) => (
           </h2>
           <h3 className={styles.record__title}>{basic_information.title}</h3>
           <span className={styles.record__year}>
-            {basic_information.year ? basic_information.year : "Unk."}
+            {basic_information.year ? basic_information.year : "Unknown."}
           </span>
         </figcaption>
       </figure>
     </article>
+  </div>
 );
 
 export default RecordThumbnail;
