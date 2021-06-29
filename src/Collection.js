@@ -27,11 +27,13 @@ class Collection extends Component {
     handlePageChange = (event, value) => {
         this.setState(
             {
-                page: value
+                page: value,
+                loaded: false
             }, () => {
                 this.retreiveRecords()
             }
         )
+        window.scrollTo(0, 0);
     }
 
     handlePageSizeChange = (event) => {
