@@ -8,10 +8,10 @@ class Collection extends Component {
     constructor(props) {
         super(props);
 
-        this.state = { releases: [], page: 1, count: 0, pageSize: 50, loaded: false };
+        this.state = { releases: [], page: 1, count: 0, pageSize: 48, loaded: false };
     }
 
-    pageSizes = [50, 75, 100];
+    pageSizes = [48, 72, 96];
 
     componentDidMount() {
         this.retreiveRecords(this.state.page);
@@ -27,11 +27,7 @@ class Collection extends Component {
     handlePageChange = (event, value) => {
         this.setState(
             {
-                releases: this.state.releases,
-                page: value,
-                count: this.state.count,
-                pageSize: event.target.value,
-                loaded: true
+                page: value
             }, () => {
                 this.retreiveRecords()
             }
@@ -41,12 +37,9 @@ class Collection extends Component {
     handlePageSizeChange = (event) => {
         this.setState(
             {
-                releases: this.state.releases,
                 page: 1,
-                count: this.state.count,
-                pageSize: event.target.value,
-                loaded: true
-                
+                pageSize: event.target.value
+
             }, () => {
                 this.retreiveRecords();
             }
@@ -70,8 +63,9 @@ class Collection extends Component {
                                     </option>
                                 ))}
                             </select>
-
-                            <Pagination shape="rounded" count={count} page={page} siblingCount={1} boundaryCount={1} variant="outlined" onChange={this.handlePageChange} />
+                            <div>
+                                <Pagination shape="rounded" count={count} page={page} siblingCount={1} boundaryCount={1} variant="outlined" onChange={this.handlePageChange} />
+                            </div>
                         </div>
                     </>
                 ) : (
