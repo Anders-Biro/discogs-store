@@ -9,7 +9,7 @@ npm install
 npm start
 
 ## TODO
-- [ ] Add album view via click on album art
+- [ ] Add album/artist detail view via click on album art
 - [ ] Create sidebar
     - [ ] Add search functionality within sidebar 
 - [ ] Update CSS
