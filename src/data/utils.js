@@ -1,5 +1,5 @@
 const BASE_URL = "https://api.discogs.com";
-const AUTH_TOKEN = "IfSfAOqhhZQYYQKEVxiGvDbRkbBtaGMlRIEFtPIb";
+const AUTH_TOKEN = "RopTEImNUtDQkwLnMumLFxVNTHICClhoFBgDTLKA";
 
 const completeUrl = (path) => {
     return `${BASE_URL}${path}`;
