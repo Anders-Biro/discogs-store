@@ -1,2 +1,2 @@
-# discogs-store
+# Ders' Discogs Storefront
  
