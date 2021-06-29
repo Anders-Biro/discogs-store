@@ -12,6 +12,7 @@ npm start
 - [ ] Add album/artist detail view via click on album art
 - [ ] Create sidebar
     - [ ] Add search functionality within sidebar 
+    - [ ] Add sort by functinality
 - [ ] Update CSS
     - [ ] Add album art hover to display artist and album name
 - [ ] Add prices
