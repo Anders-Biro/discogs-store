@@ -19,7 +19,7 @@ class Collection extends Component {
 
     retreiveRecords = () => {
         fetchReleases(this.state.page, this.state.pageSize).then(({ releases, pagination }) => {
-            console.log(pagination)
+            console.log(releases)
             this.setState({ releases: releases, page: pagination.page, count: pagination.pages, pageSize: pagination.per_page, loaded: true });
         });
     }
