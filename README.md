@@ -13,6 +13,7 @@ npm start
     - [ ] Add search functionality within sidebar 
 
 - [ ] Update CSS
+    - [ ] Add album art hover to display artist and album name
 - [ ] Add prices
 - [ ] Add contact me / make an offer ( trade or $$$ ) 
 
