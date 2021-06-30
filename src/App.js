@@ -3,9 +3,9 @@ import React, { useState, useRef } from 'react';
 import { useOnClickOutside } from './hooks';
 import Collection from './Collection';
 import './App.css';
-import Sidebar from './UI/Sidebar';
-import SidebarItems from './UI/SidebarItems';
-import DetailRecord from './components/DetailRecord';
+import Sidebar from './UI/sidebar/Sidebar';
+import SidebarItems from './UI/sidebar/SidebarItems';
+import DetailRecord from './components/record/DetailRecord';
 
 function App() {
   const [open, setOpen] = useState(false);

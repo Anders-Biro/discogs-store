@@ -11,6 +11,7 @@
     top: 0;
     left: 0;
     transition: transform 0.3s ease-in-out;
+    z-index: 1000;
 }
 
 .styled-menu div {
@@ -23,4 +24,5 @@
     color: black;
     text-decoration: none;
     transition: color 0.3s linear;
+    z-index: 1000;
 }

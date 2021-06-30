@@ -1,9 +1,8 @@
-import { useState, Component } from 'react';
-import { fetchArtist, fetchRecord } from '../data/Records';
-import Modal from '../UI/Modal';
-import Artist from './artist/Artist';
-import Loader from './Loader';
-import Record from './record/Record';
+import { Component } from 'react';
+import { fetchArtist, fetchRecord } from '../../data/Records';
+import Modal from '../../UI/Modal';
+import Artist from '../artist/Artist';
+import Record from './Record';
 
 class DetailRecord extends Component {
     state = { release: {}, artist: {}, loaded: false}

@@ -1,5 +1,5 @@
 import React from "react";
-import RecordList from "../components/RecordList";
+import RecordList from "../components/record/RecordList";
 
 const CollectionList = ({ releases, format, onDetailViewClick }) => (
   <div className="row">

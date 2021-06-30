@@ -22,4 +22,5 @@
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 1px;
+    z-index: 100000;
 }
