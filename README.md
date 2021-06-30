@@ -12,7 +12,7 @@ npm start
 - [ ] Add album/artist detail view via click on album art
 - [x] Create sidebar
     - [ ] Add search functionality within sidebar 
-    - [ ] Add sort by  (Alphabetical, year release, etc...) functinality
+    - [x] Add sort by vinyl and CD functinality
 - [ ] Update CSS
     - [ ] Add album art hover to display artist and album name
 - [ ] Add prices

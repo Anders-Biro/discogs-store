@@ -1,9 +1,9 @@
 import React from "react";
 import RecordList from "../components/RecordList";
 
-const CollectionList = ({ releases }) => (
+const CollectionList = ({ releases, format }) => (
   <div className="row">
-    <RecordList releases={releases} />
+    <RecordList releases={releases} format={format}/>
   </div>
 );
 

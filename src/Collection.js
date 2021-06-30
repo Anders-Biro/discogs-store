@@ -55,7 +55,7 @@ class Collection extends Component {
             <div>
                 {loaded ? (
                     <>
-                        <CollectionList releases={releases} />
+                        <CollectionList releases={releases} format={this.props.format} />
                         <div>
                             {"Items per Page: "}
                             <select onChange={this.handlePageSizeChange} value={pageSize}>
