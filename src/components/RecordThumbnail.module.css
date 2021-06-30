@@ -4,65 +4,84 @@
 }
 
 .record {
-    color: var(--color-white);
-  }
-  
-  .record__figure {
-    position: relative;
-    overflow: hidden;
-    margin: 0;
-    padding: 50% 0;
-  }
-  
-  .record__img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .record__artist {
-    position: absolute;
-    bottom: 1.2rem;
-    margin: 0.75rem 0.5rem;
-    font-size: 1.2rem;
-    font-weight: 400;
-  }
-  
-  .record__title {
-    position: absolute;
-    bottom: 0;
-    margin: 0.75rem 0.5rem;
-    font-size: 0.9rem;
-    font-weight: 400;
-  }
-  
-  .record__year {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 0 0 0 2rem;
-    margin: 0.75rem 0.5rem;
-  }
-  
-  .record__year::before {
-    content: "";
-    position: absolute;
-    height: 2px;
-    width: 1.6rem;
-    background: var(--color-white);
-    left: 0;
-    top: 45%;
-  }
-  
-  .record__thumbnail {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .record__thumbnail--hover {
-    filter: saturate(0);
-  }
-  
+  color: white;
+}
+
+.record__figure {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 50% 0;
+  cursor: pointer;
+}
+
+.record__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.record__artist {
+  position: absolute;
+  bottom: 1.2rem;
+  margin: 0.75rem 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.record__title {
+  position: absolute;
+  bottom: 0;
+  margin: 0.75rem 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.record__year {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 0 0 2rem;
+  margin: 0.75rem 0.5rem;
+}
+
+.record__year::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 1.6rem;
+  background: white;
+  left: 0;
+  top: 45%;
+}
+
+.record__thumbnail {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.record__thumbnail--hover {
+  filter: brightness(20%)
+}
+
+.record__hover {
+  left: 0px;
+  top: 0px;
+  float: left;
+  position: absolute;
+  z-index: 2000;
+  background-color: rgba(0, 0, 0, 0.75);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.record__hover:hover {
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+}

@@ -1,28 +1,50 @@
+import { useState } from 'react';
 import styles from './SidebarItems.module.css';
-import FormControl from '@material-ui/core/FormControl';
-import FormGroup from '@material-ui/core/FormGroup';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-import { FormLabel } from '@material-ui/core';
+import { FormControl, FormLabel, FormGroup, FormControlLabel } from '@material-ui/core';
 
 const SidebarItems = ({ open, setFormat }) => {
+    const [vinylCheckbox, setVinylCheckbox] = useState(false);
+    const [cdCheckbox, setCdCheckbox] = useState(false);
+
     const handleFormatChange = (e) => {
-        setFormat(e.target.value);
+        console.log(e);
+        if (e.target.value === 'Vinyl') {
+            if (vinylCheckbox === true) {
+                setVinylCheckbox(false);
+                setCdCheckbox(false);
+                setFormat('');
+            } else {
+                setVinylCheckbox(!vinylCheckbox);
+                setCdCheckbox(false);
+                setFormat(e.target.value);
+            }
+        } else if (e.target.value === 'CD') {
+            if (cdCheckbox === true) {
+                setVinylCheckbox(false);
+                setCdCheckbox(false);
+                setFormat('');
+            } else {
+                setCdCheckbox(!cdCheckbox);
+                setVinylCheckbox(false);
+                setFormat(e.target.value)
+            }
+        }
     }
-    
+
     return (
-        <nav className={styles['styled-menu'] } style={ open ? {transform: 'translateX(0)'} : {transform: 'translateX(-100%)'}}>
+        <nav className={styles['styled-menu']} style={open ? { transform: 'translateX(0)' } : { transform: 'translateX(-100%)' }}>
             <div>
                 <span role="img" aria-label="format"></span>
                 <FormControl>
                     <FormLabel component="label">Format</FormLabel>
                     <FormGroup>
-                        <FormControlLabel 
-                            control={<Checkbox color="primary" name="vinyl" value="Vinyl" onChange={e => handleFormatChange(e)} />}
+                        <FormControlLabel
+                            control={<Checkbox checked={vinylCheckbox} color="primary" name="vinyl" value="Vinyl" onChange={e => handleFormatChange(e)} />}
                             label="Vinyl"
                         />
-                        <FormControlLabel 
-                            control={<Checkbox color="primary" name="CD" value="CD" onChange={e => handleFormatChange(e)} />}
+                        <FormControlLabel
+                            control={<Checkbox checked={cdCheckbox} color="primary" name="CD" value="CD" onChange={e => handleFormatChange(e)} />}
                             label="CD"
                         />
                     </FormGroup>

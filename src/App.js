@@ -14,8 +14,8 @@ function App() {
   useOnClickOutside(node, () => setOpen(false));
 
   const onFormatBoxChange = (changedFormat) => {
+    console.log(changedFormat);
     setFormat(changedFormat);
-    console.log(format)
   }
 
 
