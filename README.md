@@ -15,5 +15,6 @@ npm start
     - [x] Add sort by vinyl and CD functinality
 - [ ] Update CSS
     - [x] Add album art hover to display artist and album name
+    - [ ] Fix detail view modal CSS
 - [ ] Add prices
 
