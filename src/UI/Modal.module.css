@@ -9,22 +9,24 @@
   }
   
   .modal {
+    max-width: 1135px;
     position: fixed;
     top: 10%;
-    left: 5%;
-    width: 90%;
+    width: 100vw;
     background-color: white;
     padding: 1rem;
-    border-radius: 6px;
+    border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-    z-index: 30;
+    z-index: 3000;
     animation: slide-down 300ms ease-out forwards;
+    left: 50%;
+    margin-left: -25vw;
+    max-height: 80vh;
   }
   
   @media (min-width: 768px) {
     .modal {
-      width: 40rem;
-      left: calc(50% - 20rem);
+      width: 50vw;
     }
   }
   

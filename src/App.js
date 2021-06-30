@@ -22,10 +22,12 @@ function App() {
   }
 
   const hideDetailView = () => {
+    document.body.style.overflow = 'unset';
     setDetailView(false);
   }
 
   const onDetailViewClick = (id) => {
+    document.body.style.overflow = 'hidden';
     setDetailView(true);
     setReleaseId(id);
   }

@@ -16,5 +16,5 @@ npm start
 - [ ] Update CSS
     - [x] Add album art hover to display artist and album name
     - [ ] Fix detail view modal CSS
-- [ ] Add prices
+- [ ] Add song to listen to from album
 

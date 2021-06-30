@@ -3,9 +3,10 @@ import { fetchArtist, fetchRecord } from '../../data/Records';
 import Modal from '../../UI/Modal';
 import Artist from '../artist/Artist';
 import Record from './Record';
+import styles from './DetailRecord.module.css'
 
 class DetailRecord extends Component {
-    state = { release: {}, artist: {}, loaded: false}
+    state = { release: {}, artist: {}, loaded: false }
 
     componentDidMount() {
         fetchRecord(this.props.releaseId).then(release => {
@@ -19,11 +20,13 @@ class DetailRecord extends Component {
     render() {
         return this.state.loaded ? (
             <Modal onClose={this.props.onClose}>
-                <div className="row">{<Record release={this.state.release}/>}</div>
-                <div className="row">{<Artist artist={this.state.artist}/>}</div>
+                <div className={styles.content}>
+                    <div className="row">{<Record release={this.state.release} />}</div>
+                    <div className="row">{<Artist artist={this.state.artist} />}</div>
+                </div>
             </Modal>
         ) : (
-            <div/>
+            <div />
         )
     }
 }

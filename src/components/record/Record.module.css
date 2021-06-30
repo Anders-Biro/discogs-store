@@ -1,6 +1,7 @@
 .record {
     display: flex;
     flex-direction: column;
+    height: 50vh;
   }
   
   .record__cover {
@@ -36,6 +37,8 @@
   }
   
   .record__songs {
+    height: 37vh;
+    overflow-y: scroll;
     list-style: none;
     padding: 0;
   }
