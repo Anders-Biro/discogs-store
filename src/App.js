@@ -23,7 +23,6 @@ function App() {
 
   const hideDetailView = () => {
     setDetailView(false);
-    setReleaseId(0);
   }
 
   const onDetailViewClick = (id) => {

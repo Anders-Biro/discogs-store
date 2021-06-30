@@ -8,7 +8,7 @@ const RecordThumbnail = ({ basic_information, onDetailViewClick }) => {
   const mouseOut = () => setHovering(false);
 
   const handleOnClick = () => {
-    onDetailViewClick(basic_information.id)
+    onDetailViewClick(basic_information.id);
   }
 
   return (
@@ -25,11 +25,11 @@ const RecordThumbnail = ({ basic_information, onDetailViewClick }) => {
               <h2 className={styles.record__artist}>
                 {basic_information.artists.length
                   ? basic_information.artists[0].name
-                  : "Unk."}
+                  : "Unknown"}
               </h2>
               <h3 className={styles.record__title}>{basic_information.title}</h3>
               <span className={styles.record__year}>
-                {basic_information.year ? basic_information.year : "Unk."}
+                {basic_information.year ? basic_information.year : "Unknown"}
               </span>
             </figcaption>
           </div>

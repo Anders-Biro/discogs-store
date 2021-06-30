@@ -30,6 +30,7 @@
   margin: 0.75rem 0.5rem;
   font-size: 1.2rem;
   font-weight: 400;
+  pointer-events: none;
 }
 
 .record__title {
@@ -38,6 +39,7 @@
   margin: 0.75rem 0.5rem;
   font-size: 0.9rem;
   font-weight: 400;
+  pointer-events: none;
 }
 
 .record__year {
@@ -46,6 +48,7 @@
   right: 0;
   padding: 0 0 0 2rem;
   margin: 0.75rem 0.5rem;
+  pointer-events: none;
 }
 
 .record__year::before {
