@@ -2,7 +2,7 @@ import React from "react";
 import RecordThumbnail from "./RecordThumbnail";
 import styles from "./RecordList.module.css";
 
-const RecordList = ({ releases, format }) => {
+const RecordList = ({ releases, format, onDetailViewClick }) => {
 
   const checkFormat = (release) => {
     if(format === '') {
@@ -17,7 +17,7 @@ const RecordList = ({ releases, format }) => {
       {releases
         .filter(release => checkFormat(release))
         .map(release => (
-          <RecordThumbnail key={release.id} {...release} />
+          <RecordThumbnail key={release.id} {...release} onDetailViewClick={onDetailViewClick}/>
         ))}
     </div>
   )

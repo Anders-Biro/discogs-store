@@ -5,10 +5,13 @@ import Collection from './Collection';
 import './App.css';
 import Sidebar from './UI/Sidebar';
 import SidebarItems from './UI/SidebarItems';
+import DetailRecord from './components/DetailRecord';
 
 function App() {
   const [open, setOpen] = useState(false);
   const [format, setFormat] = useState('');
+  const [detailView, setDetailView] = useState(false);
+  const [releaseId, setReleaseId] = useState(0);
 
   const node = useRef();
   useOnClickOutside(node, () => setOpen(false));
@@ -16,6 +19,16 @@ function App() {
   const onFormatBoxChange = (changedFormat) => {
     console.log(changedFormat);
     setFormat(changedFormat);
+  }
+
+  const hideDetailView = () => {
+    setDetailView(false);
+    setReleaseId(0);
+  }
+
+  const onDetailViewClick = (id) => {
+    setDetailView(true);
+    setReleaseId(id);
   }
 
 
@@ -26,7 +39,8 @@ function App() {
         <SidebarItems open={open} setFormat={onFormatBoxChange} />
       </div>
       <div className='content'>
-        <Collection format={format}/>
+        <Collection format={format} onDetailViewClick={onDetailViewClick}/>
+        {(detailView) ? (<DetailRecord releaseId={releaseId} onClose={hideDetailView}/>) : (<div/>)}
       </div>
     </div>
   );

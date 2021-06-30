@@ -1,14 +1,18 @@
 import React, { useState } from "react";
 import styles from "./RecordThumbnail.module.css";
 
-const RecordThumbnail = ({ basic_information }) => {
+const RecordThumbnail = ({ basic_information, onDetailViewClick }) => {
   const [hovering, setHovering] = useState(false);
 
   const mouseOver = () => setHovering(true);
   const mouseOut = () => setHovering(false);
 
+  const handleOnClick = () => {
+    onDetailViewClick(basic_information.id)
+  }
+
   return (
-    <div className={`${styles.boxshadow} ${styles.record__thumbnail}`} onMouseOver={mouseOver} onMouseOut={mouseOut}>
+    <div className={`${styles.boxshadow} ${styles.record__thumbnail}`} onMouseOver={mouseOver} onMouseOut={mouseOut} onClick={handleOnClick}>
       <figure className={styles.record__figure}>
         <img
           className={styles.record__img}
