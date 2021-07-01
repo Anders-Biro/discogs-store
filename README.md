@@ -3,6 +3,8 @@ A demo project for React.js, Material-UI and the Discogs API.
 
 A store front for my own personal vinyl/cd collection.
 
+https://user-images.githubusercontent.com/41286308/124049118-a7667e80-d9cc-11eb-86ff-f144c99135e6.mp4
+
 ## Installation
 npm install
 
