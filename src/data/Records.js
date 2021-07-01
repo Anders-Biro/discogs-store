@@ -1,6 +1,6 @@
 import { makeFetch } from "./utils";
 
-const USER = "JawKnea";
+const USER = "DersStore";
 const PUBLIC_FOLDER = "0";
 
 export const fetchReleases = (page, perPage) =>

@@ -12,7 +12,6 @@ class DetailRecord extends Component {
         fetchRecord(this.props.releaseId).then(release => {
             fetchArtist(release.artists[0].id).then(artist => {
                 this.setState({ release, artist, loaded: true })
-                console.log(artist);
             });
         });
     }

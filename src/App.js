@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 
 import { useOnClickOutside } from './hooks';
-import Collection from './Collection';
+import Collection from './collections/Collection';
 import './App.css';
 import Sidebar from './UI/sidebar/Sidebar';
 import SidebarItems from './UI/sidebar/SidebarItems';

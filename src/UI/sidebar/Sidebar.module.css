@@ -1,4 +1,4 @@
-.sidebar {
+.sidebar__button {
     position: fixed;
     top: 2%;
     left: 2rem;
@@ -14,7 +14,7 @@
     z-index: 101;
   }
 
-.sidebar div {
+.sidebar__button div {
     width: 2rem;
     height: 0.25rem;
     background: rgb(47, 47, 47);

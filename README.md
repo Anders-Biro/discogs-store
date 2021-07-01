@@ -11,10 +11,11 @@ npm start
 ## TODO
 - [x] Add album/artist detail view via click on album art
 - [x] Create sidebar
-    - [ ] Add search functionality within sidebar 
+    - [ ] Add search
     - [x] Add sort by vinyl and CD functinality
+    - [ ] Add more filters ie) Genre, price
 - [ ] Update CSS
     - [x] Add album art hover to display artist and album name
     - [ ] Fix detail view modal CSS
-- [ ] Add song to listen to from album
+    - [ ] Update drawer CSS
 

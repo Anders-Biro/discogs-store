@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import { fetchReleases } from "./data/Records";
-import Loader from "./components/Loader";
-import CollectionList from "./collections/CollectionList";
+import { fetchReleases } from "../data/Records";
+import Loader from "../components/Loader";
+import CollectionList from "./CollectionList";
 import { Pagination } from "@material-ui/lab";
+import styles from './Collection.module.css';
 
 class Collection extends Component {
     constructor(props) {
@@ -54,18 +55,20 @@ class Collection extends Component {
             <div>
                 {loaded ? (
                     <>
-                        <CollectionList releases={releases} format={this.props.format} onDetailViewClick={this.props.onDetailViewClick}/>
-                        <div>
-                            {"Items per Page: "}
-                            <select onChange={this.handlePageSizeChange} value={pageSize}>
-                                {this.pageSizes.map((size) => (
-                                    <option key={size} value={size}>
-                                        {size}
-                                    </option>
-                                ))}
-                            </select>
+                        <CollectionList releases={releases} format={this.props.format} onDetailViewClick={this.props.onDetailViewClick} />
+                        <div className={styles.flexContainer}>
                             <div>
                                 <Pagination shape="rounded" count={count} page={page} siblingCount={1} boundaryCount={1} variant="outlined" onChange={this.handlePageChange} />
+                            </div>
+                            <div>
+                                {"Items per Page: "}
+                                <select onChange={this.handlePageSizeChange} value={pageSize}>
+                                    {this.pageSizes.map((size) => (
+                                        <option key={size} value={size}>
+                                            {size}
+                                        </option>
+                                    ))}
+                                </select>
                             </div>
                         </div>
                     </>

@@ -8,7 +8,6 @@ const SidebarItems = ({ open, setFormat }) => {
     const [cdCheckbox, setCdCheckbox] = useState(false);
 
     const handleFormatChange = (e) => {
-        console.log(e);
         if (e.target.value === 'Vinyl') {
             if (vinylCheckbox === true) {
                 setVinylCheckbox(false);
@@ -49,10 +48,6 @@ const SidebarItems = ({ open, setFormat }) => {
                         />
                     </FormGroup>
                 </FormControl>
-            </div>
-            <div>
-                <span role="img" aria-label="filter"></span>
-                Filter
             </div>
         </nav>
     )
