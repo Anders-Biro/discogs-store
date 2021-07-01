@@ -1,4 +1,4 @@
-# Ders' Discogs Storefront
+# Anders Discogs Storefront
 A demo project for React.js, Material-UI and the Discogs API.
 
 A store front for my own personal vinyl/cd collection.
